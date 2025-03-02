@@ -6,7 +6,7 @@ const session = require('express-session');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const productRoutes = require('./routes/productRoutes');
-const User = require('./models/user');  
+const User = require('./models/User');  
 
 dotenv.config();
 
