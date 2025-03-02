@@ -182,7 +182,7 @@ app.get('/products', async (req, res) => {
 });
 
 // Ruta para obtener un producto por su ID
-app.get('/api/products/:id', async (req, res) => {
+app.get('/products/:id', async (req, res) => {
   const productId = req.params.id;
   try {
     // Aquí obtendrías un producto desde la base de datos con el ID si estuvieras usando MongoDB
@@ -197,7 +197,7 @@ app.get('/api/products/:id', async (req, res) => {
 });
 
 // Rutas de productos (lo que ya tenías)
-app.use('/api/products', productRoutes);
+app.use('/products', productRoutes);
 
 // Conexión con MongoDB
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
